@@ -11,10 +11,10 @@ def stop_watch(func):
     return wrapper
 
 
-@stop_watch
 def counter():
-    for i in range(100):
+    for i in range(5000):
         print(i)
 
 
+counter = stop_watch(counter)
 counter()
